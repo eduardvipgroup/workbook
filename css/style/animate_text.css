@@ -1,0 +1,94 @@
+.animate_text{
+    padding: 0;
+    height: 500px;
+    margin: 30px 10px;
+    background: radial-gradient(at left top, #8588a5, #996ea5, #a55a84,#0b0c86) ;
+    position: relative;
+    animation: aniBack 15s linear infinite;
+}
+@keyframes aniBack {
+    100%{
+        background-position: 100em 100em;
+    }
+}
+.animate_text_ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) skewY(-8deg);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    background: #f00;
+    box-shadow:  0 5px 10px #8588a5,
+    -5px 5px 10px #7ba9df,
+    5px -5px 10px #629fdf,
+    5px 0 10px #7918e2;
+    overflow: hidden;
+}
+.animate_text_ul>li{
+    display: block;
+    list-style: none;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 4em;
+    text-transform: uppercase;
+    animation: animateText 3s linear infinite;
+
+}
+@keyframes animateText {
+    0%{
+        transform: translateY(-100px) rotateY(0);
+    }
+    20%{
+        transform: translateY(0) rotateY(360deg);
+    }
+    40%{
+        transform: translateY(-10px) rotateY(360deg);
+    }
+    50%{
+        transform: translateY(0) rotateY(360deg);
+    }
+    50%{
+        transform: translateY(0) rotateY(360deg);
+    }
+    60%{
+        transform: translateY(0) rotateY(360deg);
+    }
+    70%{
+        transform: translateY(0) rotateY(360deg);
+    }
+    80%{
+        transform: translateY(0) rotateY(360deg);
+    }
+    100%{
+        transform: translateY(100px) rotateY(720deg);
+    }
+}
+.animate_text_ul>li:nth-child(1){
+     animation-delay: .1s;
+ }
+.animate_text_ul>li:nth-child(2){
+    animation-delay: .2s;
+}
+.animate_text_ul>li:nth-child(3){
+    animation-delay: .3s;
+}
+.animate_text_ul>li:nth-child(4){
+    animation-delay: .4s;
+}
+.animate_text_ul>li:nth-child(5){
+    animation-delay: .5s;
+}
+.animate_text_ul>li:nth-child(6){
+    animation-delay: .6s;
+}
+.animate_text_ul>li:nth-child(7){
+    animation-delay: .7s;
+}
+.animate_text_ul>li:nth-child(8){
+    animation-delay: .8s;
+}
+.animate_text_ul>li:nth-child(9){
+    animation-delay: .9s;
+}

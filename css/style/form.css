@@ -1,0 +1,173 @@
+body {
+    padding: 0;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    max-width: 1440px;
+}
+
+p {
+    margin: 0 110px;
+}
+
+.index {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: #35acdf;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    position: fixed;
+}
+
+.wrapper {
+    background: url("../../library/img/ice.png") #2b8cf6;
+    background-size: cover;
+    width: 700px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+#LetMask{
+    background: url("../../library/img/ice.png");
+
+}
+h1.Picture_instead_of_color {
+    background: url("../../library/img/ice.png") 100% 100% no-repeat;
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    font-size: 250px;
+    -webkit-text-stroke: 1px #fff;
+    margin: 20px auto;
+    box-shadow: 0 0 5px #333;
+    width: 700px;
+    text-align: center;
+}
+
+h1.Picture_instead_of_color:hover {
+    -webkit-background-clip: padding;
+    -webkit-text-fill-color: white;
+}
+
+progress {
+    margin: 10px 0 5px;
+    height: 18px;
+    border-radius: 5px;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: 5px;
+    background: linear-gradient(180deg, #a52c9a, #c3c3c3, #a52c9a);
+    transition: top 1s ease-out 0.5s;
+}
+
+progress::-webkit-progress-value {
+    border-radius: 5px 0 0 5px;
+    background: linear-gradient(180deg, #091930, #7ba9df, #091930);
+}
+
+code {
+    margin: 10px 5px 0;
+
+}
+
+p.p1 {
+    margin: 150px 0 0;
+
+}
+
+.form_box {
+    margin: 10px auto;
+    width: 350px;
+    height: 320px;
+    padding: 40px;
+    border: 2px solid #2a83ea;
+    border-radius: 10px;
+    box-shadow: 0 5px 45px rgba(230, 230, 230, 0.5);
+    background: rgba(16, 19, 111, 0.8);
+}
+
+.form_box h2 {
+    margin: 0 0 30px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px #12c9ea;
+    position: relative;
+    padding: 20px;
+}
+
+.form_box h2:before {
+    content: attr(data-text);
+    position: absolute;
+    top: 27%;
+    left: 26%;
+    color: #100212;
+    filter: blur(2px);
+}
+
+.form_1 {
+    width: inherit;
+    height: auto;
+}
+
+.form_1-inputBox {
+    width: inherit;
+    position: relative;
+
+}
+
+.form_1-inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    letter-spacing: 1px;
+
+}
+
+.form_1-inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+    letter-spacing: 1px;
+}
+
+.form_1-inputBox input:focus ~ label,
+.form_1-inputBox input:valid ~ label {
+    top: -18px;
+    font-size: 12px;
+}
+
+.form_1 input[type="submit"] {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 30px;
+    color: white;
+    background: rgba(11, 21, 42, 0.8);
+
+}
+
+.form_1 input[type="submit"]:hover {
+    background: rgba(11, 21, 42, 0.4);
+
+}

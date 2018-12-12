@@ -1,0 +1,130 @@
+.glowing_icon {
+    padding: 0;
+    height: 300px;
+    margin: 30px 10px;
+    background: #0b0c86;
+    position: relative;
+
+}
+
+.glowing_icon:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 80px solid transparent;
+    border-top: 80px solid green;
+    border-right: 80px solid green;
+}
+.glowing_icon:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    border-left: 488px solid transparent;
+    border-right: 488px solid transparent;
+    border-bottom: 50px solid red;
+    box-sizing: border-box;
+}
+@media (max-width: 1200px){
+    .glowing_icon:after{
+        width: 90%;
+
+        border-left: 470px solid transparent;
+        border-right: 470px solid transparent;
+        border-bottom: 50px solid red;
+    }
+}
+@media (max-width: 980px){
+    .glowing_icon:after{
+        border-left: 300px solid transparent;
+        border-right: 300px solid transparent;
+        border-bottom: 50px solid red;
+    }
+}
+.glowing_icon span {
+    position: absolute;
+    top: 32px;
+    right: 22px;
+    transform: rotate(45deg);
+    color: white;
+    font-size: 30px;
+}
+
+.glowing_icon_ul {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.glowing_icon_ul > li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.glowing_icon_ul > li > a {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    line-height: 80px;
+    background: #333;
+    font-size: 2em;
+    color: #666;
+    transition: .5s;
+}
+
+.glowing_icon_ul li a:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: yellow;
+    transition: .5s;
+    transform: scale(.9);
+    z-index: -1;
+}
+
+.glowing_icon_ul li:nth-child(4) a:before {
+    background: #19ff06;
+}
+
+.glowing_icon_ul li a:hover:before {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px yellow;
+}
+
+.glowing_icon_ul li:nth-child(4) a:hover:before {
+    box-shadow: 0 0 15px #19ff06;
+}
+
+.glowing_icon_ul li a:hover {
+    color: yellow;
+    box-shadow: 0 0 5px yellow;
+    text-shadow: 0 0 5px yellow;
+}
+
+.glowing_icon_ul li:nth-child(4) a:hover {
+    color: #19ff06;
+    box-shadow: 0 0 5px #19ff06;
+    text-shadow: 0 0 5px #19ff06;
+}
+
+.glowing_icon_ul li:nth-child(1) a:hover {
+    color: #ff3603;
+    box-shadow: 0 0 5px #ff3603;
+    text-shadow: 0 0 5px #ff3603;
+}
+.fa-phone{
+    transform: rotate(90deg);
+}

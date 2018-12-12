@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="library/css/style.css">
+    <script src="library/js/bootstrap.min.js"></script>
+    <script src="library/js/main.js"></script>
+    <script src="library/js/jquery.js"></script>
+
+</head>
+<body style="background: #091930">
+<section class="snow"></section>
+<div id="wrapper">
+    <div class="name">WORKBOOK</div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li>
+                <a href="css/css1.php">Фичи CSS</a>
+            </li>
+            <li>
+                <a href="canvas.html">Canvas</a>
+            </li>
+            <li>
+                <a href="js/js.php">базовый Javascript</a>
+            </li>
+            <li>
+                <a href="#">продвинутый Javascript(ES6)</a>
+            </li>
+            <li>
+                <a href="php/php.php">базовый PHP</a>
+            </li>
+            <li>
+                <a href="#">продвинутый PHP (ООП)</a>
+            </li>
+            <li>
+                <a href="#">LAMP</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<script src="library/js/snowfall.js"></script>
+
+<script type="text/javascript">
+    $(document).snowfall({
+        flakeCount: 300,
+        image :"library/img/php.png",
+        minSize: 3,
+        maxSize: 40,
+        maxSpeed: 1,
+        round: true,
+        shadow: false
+    });
+</script>
+</body>
+</html>

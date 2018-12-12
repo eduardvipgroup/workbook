@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <link rel="stylesheet" href="library/css/style.css">
+    <link rel="stylesheet" href="library/css/strategy.css">
+    <script src="library/js/bootstrap.min.js"></script>
+    <script src="library/js/canvas.js" defer></script>
+
+</head>
+<body>
+
+<ul class="nav">
+    <li>
+        <a class="index" href="index.html">главная</a>
+    </li>
+</ul>
+
+<div class="canvas_block">
+    <canvas id="cl" width="100" height="400"></canvas>
+    <canvas id="cl2" width="100" height="400"></canvas>
+    <p class="up">Это небо</p>
+    <p class="down">Это песок</p>
+</div>
+<div class="canvas_block2">
+    <canvas id="cl_canvas_block2" width="100" height="300"></canvas>
+</div>
+<div class="strategy">
+    <div class="strategy__empty">
+        <span class="strategy__empty_p">стратегия<span class="strategy__empty_circle"></span></span>
+    </div>
+    <div class="strategy__lines">
+        <div class="strategy__line1"></div>
+        <div class="strategy__line2"></div>
+    </div>
+    <h2 class="strategy__title">Мы выстраиваем <b style="color: red; font-weight: bold">объемную стратегию</b><br>
+        по заполучению каждого клиента для вас</h2>
+    <div class="strategy__main">
+        <div class="strategy__main_view">
+            <div class="strategy__main_start">
+                <h4 class="strategy__main_start_name">
+                    Так она выглядит глазами <br><b style="color: red; font-weight: bold">вашего клиента</b>
+                </h4>
+                <div class="strategy__main_start_circle"></div>
+            </div>
+            <div class="strategy__main_schema"><p>Так она выглядит нашими глазами</p></div>
+        </div>
+        <div class="strategy__main_next">
+            <div class="strategy__main_next_item">
+                <div class="strategy__main_next_item_number">01</div>
+                <div class="strategy__main_next_item_box"></div>
+                <div class="strategy__main_next_item_name">Промо пост Инста</div>
+            </div>
+            <div class="strategy__main_next_item">
+                <div class="strategy__main_next_item_number">02</div>
+                <div class="strategy__main_next_item_box"></div>
+                <div class="strategy__main_next_item_name">Промо пост Инста</div>
+            </div>
+            <div class="strategy__main_next_item">
+                <div class="strategy__main_next_item_number">03</div>
+                <div class="strategy__main_next_item_box"></div>
+                <div class="strategy__main_next_item_name">Промо пост Инста</div>
+            </div>
+            <div class="strategy__main_next_item">
+                <div class="strategy__main_next_item_number">04</div>
+                <div class="strategy__main_next_item_box"></div>
+                <div class="strategy__main_next_item_name">Промо пост Инста</div>
+            </div>
+            <div class="strategy__main_next_item">
+                <div class="strategy__main_next_item_number">05</div>
+                <div class="strategy__main_next_item_box"></div>
+                <div class="strategy__main_next_item_name">Промо пост Инста</div>
+            </div>
+            <div class="strategy__main_next_item">
+                <div class="strategy__main_next_item_number">06</div>
+                <div class="strategy__main_next_item_box"></div>
+                <div class="strategy__main_next_item_name">Промо пост Инста</div>
+            </div>
+            <div class="strategy__main_next_item">
+                <div class="strategy__main_next_item_number">07</div>
+                <div class="strategy__main_next_item_box"></div>
+                <div class="strategy__main_next_item_name">Промо пост Инста</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const itemBox = document.querySelectorAll('.strategy__main_next_item_box');
+
+    for (var i=0; i<itemBox.length; i++) {
+        itemBox[i].addEventListener('click', toggleView);
+        console.log(itemBox[i]);
+    }
+    function toggleView() {
+        var elem = document.querySelectorAll('.strategy__main_next_item_box');
+        console.log(elem);
+
+        for (var i=0; i<elem.length; i++) {
+            this.classList.toggle('strategy__main_next_item_visible');
+
+            this.style.cssText = 'display:block';
+        }
+    }
+</script>
+
+</body>
+</html>
