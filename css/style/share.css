@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.index {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    background: #35acdf;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 30px;
+
+}
+.share {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: .5s;
+    background: #fff;
+}
+.share.active {
+    width: 300px;
+    height: 270px;
+    background: #fff;
+    border-radius: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .5);
+}
+.share .toggle {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background: #ff0165;
+    border-radius: 50%;
+    transition: .5s;
+    cursor: pointer;
+}
+.share.active .toggle{
+    bottom: -25px;
+
+}
+.share .toggle:before {
+    content: '\f103';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 55px;
+    font-family: fontAwesome;
+    color: white;
+    font-size: 28px;
+}
+.share.active .toggle:before {
+    content: '\f00d';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 55px;
+    font-family: fontAwesome;
+    color: white;
+    font-size: 28px;
+}
+.share ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transform: scale(0);
+}
+.share.active ul{
+    transform: scale(1);
+    transition: .5s;
+    transition-delay: .5s;
+}
+.share ul li{
+    list-style: none;
+}
+.share ul li a{
+    display: block;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+    text-decoration: none;
+    color: #262626;
+    transition: .5s;
+}
+.share ul li a:hover{
+    color: #fff;
+    background: #2e56ff;
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .5);
+}
+.share ul li a .fab{
+    width: 24px;
+    height: 24px;
+    background-color: #000;
+    color: #e7e9ff;
+    text-align: center;
+    line-height: 24px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+.share ul li:nth-child(1) a:hover{
+    background: #ff2102;
+
+}

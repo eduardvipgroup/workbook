@@ -1,6 +1,11 @@
-.wrapper {
-    position: relative;
+.wrapper{
     width: 1200px;
+    height: 800px;
+    background: #262626;
+}
+.wrapper-box {
+    position: relative;
+    width: inherit;
     height: 300px;
     margin: 10px auto;
 }
