@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../library/fontAwesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="style/animate_leaves.css">
     <link rel="stylesheet" href="style/image_imgBox.css">
+    <link rel="stylesheet" href="style/kate-paper.css">
 
 </head>
 <body>
@@ -41,6 +42,7 @@
             <img class="view_products_imgBox-img" src="../library/img/mac2.png" alt="MacBook pro">
         </div>
     </div>
+    <div class="kate"></div>
 </div>
 <script src="../library/js/jquery.js"></script>
 

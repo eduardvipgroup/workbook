@@ -1,0 +1,28 @@
+.kate{
+    position: relative;
+    width: 800px;
+    height: 400px;
+    background: url("../../library/img/kate.jpg"), url("../../library/img/wrinkled-paper-texture.jpg");
+    background-size: cover;
+    transition: 3s ease-out;
+
+}
+.kate:hover{
+    animation: animate 6s infinite;
+    transition: 1s ease-out;
+
+}
+@keyframes animate {
+    0%{
+        filter: grayscale(1) contrast(1);
+    }
+    33%{
+        background-blend-mode: color-burn;
+        filter: none;
+        transition: 3s ease-out;
+
+    }
+    100%{
+        filter: saturate(300%);
+    }
+}

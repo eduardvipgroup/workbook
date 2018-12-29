@@ -50,6 +50,9 @@
             <li>
                 <a href="Navigation_Bar.php">Amazing navbar</a>
             </li>
+            <li>
+                <a href="snow-fall.php">Snow fall</a>
+            </li>
         </ul>
     </nav>
 
