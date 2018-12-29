@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Animation leaves</title>
-    <link rel="stylesheet" href="../library/fontAwesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../library/fontAwesome/css/fontawesome-all.css">
     <link rel="stylesheet" href="style/animate_leaves.css">
     <link rel="stylesheet" href="style/animate_text.css">
     <link rel="stylesheet" href="style/animate_button.css">
     <link rel="stylesheet" href="style/neon_text.css">
     <link rel="stylesheet" href="style/glowing_icon.css">
     <link rel="stylesheet" href="style/infinity.css">
+    <link rel="stylesheet" href="style/3D_contacts.css">
 
 </head>
 <body>
@@ -166,6 +167,20 @@
             ?>
         </pre>
         <div id="infinity"></div>
+    </div>
+    <div class="three_contacts">
+        <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="details">Europe</div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-phone" aria-hidden="true"></i></div>
+            <div class="details">Europe</div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></div>
+            <div class="details">Europe</div>
+        </div>
     </div>
 </div>
 

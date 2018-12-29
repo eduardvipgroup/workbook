@@ -1,0 +1,62 @@
+.three_contacts {
+    display: flex;
+    width: 900px;
+    height: 300px;
+    margin: 100px auto;
+    background-color: #000;
+    align-items: center;
+}
+
+.three_contacts .box {
+    position: relative;
+    width: 300px;
+    height: 100px;
+    margin: 10px;
+    color: #7b7b7b;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.three_contacts .box .icon {
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    background: #091930;
+    border: 1px solid #7b7b7b;
+    transform-origin: top;
+    transform: translateY(0) rotateX(0deg);
+}
+
+.three_contacts .box:hover .icon {
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.three_contacts .box .icon .fa {
+    font-size: 4em;
+    line-height: 100px;
+}
+
+.three_contacts .box .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    background: #ff0165;
+    border: 1px solid #7b7b7b;
+    line-height: 100px;
+    font-size: 1.5em;
+    color: #091930;
+    transform-origin: bottom;
+    transform: translateY(-100px) rotateX(90deg);
+}
+.three_contacts .box:hover .details {
+    transform: translateY(0) rotateX(0deg);
+}
+.three_contacts .box:nth-child(1) .details {
+    background: #75cedc;
+}
+.three_contacts .box:nth-child(3) .details {
+    background: #3fdc30;
+}

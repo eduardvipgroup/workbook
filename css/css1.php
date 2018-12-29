@@ -47,6 +47,9 @@
             <li>
                 <a href="slider.php">Slider</a>
             </li>
+            <li>
+                <a href="Navigation_Bar.php">Amazing navbar</a>
+            </li>
         </ul>
     </nav>
 
