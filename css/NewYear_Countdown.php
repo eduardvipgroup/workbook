@@ -42,7 +42,6 @@
             flex-wrap: wrap;
             justify-content: center;
             transform: translateY(50%);
-
         }
 
         h1 {
@@ -95,7 +94,7 @@
 
 <p style="font-size: .16rem"><a class="index" href="css1.php">главная</a></p>
 <div class="center">
-    <h1><span>2019</span> <br>New Year countdown</h1>
+    <h1><span>2020</span> <br>New Year countdown</h1>
     <div id="clock"></div>
 </div>
 <script src="../library/js/jquery.js"></script>
@@ -104,7 +103,7 @@
 <script type="text/javascript">
 
 
-    $('#clock').countdown('2019/01/01', function (event) {
+    $('#clock').countdown('2020/01/01', function (event) {
         $(this).html(event.strftime(
              '<div><span>%w</span><span>Weeks</span></div>'
             + '<div><span>%d</span><span>Days</span></div>'
@@ -115,7 +114,7 @@
         );
     });
     var time = document.querySelector('.time');
-    if(time.innerHTML === "17"){
+    if(time.innerHTML === "40"){
         document.body.style.background = 'red';
     }
 </script>

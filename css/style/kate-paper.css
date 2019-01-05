@@ -5,10 +5,18 @@
     background: url("../../library/img/kate.jpg"), url("../../library/img/wrinkled-paper-texture.jpg");
     background-size: cover;
     transition: 3s ease-out;
-
+    display: flex;
+    align-items: center;
+}
+.kate h3{
+    font-size: 12em;
+    line-height: 1em;
+    margin: 0 0 0 50px;
+    padding: 0;
+    mix-blend-mode: overlay;                      !important;
 }
 .kate:hover{
-    animation: animate 6s infinite;
+    animation: animate 9s infinite;
     transition: 1s ease-out;
 
 }
@@ -16,7 +24,7 @@
     0%{
         filter: grayscale(1) contrast(1);
     }
-    33%{
+    50%{
         background-blend-mode: color-burn;
         filter: none;
         transition: 3s ease-out;

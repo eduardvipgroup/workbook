@@ -53,6 +53,12 @@
             <li>
                 <a href="snow-fall.php">Snow fall</a>
             </li>
+            <li>
+                <a href="table-box.php">Table</a>
+            </li>
+            <li>
+                <a href="black-white.php">Black & white</a>
+            </li>
         </ul>
     </nav>
 
