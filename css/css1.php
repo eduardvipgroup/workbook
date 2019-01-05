@@ -45,6 +45,9 @@
                 <a href="NewYear_Countdown.php">New Year countdown</a>
             </li>
             <li>
+                <a href="Countdown-10-9-8.php">Countdown-10-9-8</a>
+            </li>
+            <li>
                 <a href="slider.php">Slider</a>
             </li>
             <li>
