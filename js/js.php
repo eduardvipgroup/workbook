@@ -30,7 +30,7 @@
                 <a class="index" href="../index.html">главная</a>
             </li>
             <li>
-                <a href="#">работа с файлами</a>
+                <a href="hexagon.html">Glowing hexagon</a>
             </li>
             <li>
                 <a href="#">работа с БД Mysql</a>

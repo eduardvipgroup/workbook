@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glowing hexagon</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .index {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            background: #35acdf;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            text-transform: uppercase;
+            margin: 30px;
+            cursor: pointer;
+        }
+        #cover{
+            width: 100%;
+            height: 100%;
+        }
+        #cover canvas{
+            width: 100%;
+            position: absolute;
+        }
+        h1{
+            text-transform: uppercase;
+            font-size: 13vw;
+            text-align: center;
+            position: absolute;
+            top: 33%;
+            left: 33%;
+            color: #ff0165;
+            mix-blend-mode: color-burn;
+        }
+    </style>
+</head>
+<body>
+<p><a class="index" href="../index.html">главная</a></p>
+
+<div id="cover">
+    <canvas></canvas>
+    <canvas></canvas>
+</div>
+<h1>cool!</h1>
+<script src="../library/js/hexagon-plugin.js"></script>
+</body>
+</html>

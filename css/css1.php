@@ -62,6 +62,13 @@
             <li>
                 <a href="black-white.php">Black & white</a>
             </li>
+            <li>
+                <a href="wave.html">Wave & wave</a>
+            </li>
+            <li>
+                <a href="navigation-menu.html">Creative navigation menu</a>
+            </li>
+
         </ul>
     </nav>
 
