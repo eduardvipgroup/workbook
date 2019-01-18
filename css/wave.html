@@ -81,6 +81,8 @@
 
 </head>
 <body>
+<p><a class="index" href="css1.php">главная</a></p>
+
 <div class="image">
 
     <div id="container">
@@ -144,7 +146,24 @@
 </div>
 <div class="white">
 </div>
+<script>
+    window.addEventListener('click', click);
 
+    function click(e) {
+console.log(document.getElementById('container3').getElementsByTagName('svg'));
+        if (e.target.tagName === 'A') {
+            /* Ели кликнули по ссылки - перейти по ней */
+            window.location.href = e.target.href;
+            return;/* Это может и не нужно, но, на всякий случай, выходим из функции*/
+        }
+
+
+        /* Здесь то, что делается по клику в любом месте, кроме ссылки */
+
+        color = document.body.style.backgroundColor = '#'+(0x1000000+(Math.random())*0xffffff).toString(16).substr(1,6);
+        document.getElementsByClassName('white')[0].style.backgroundColor = color;
+    }
+</script>
 
 </body>
 </html>

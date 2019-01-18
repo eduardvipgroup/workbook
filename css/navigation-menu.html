@@ -75,7 +75,6 @@
             transform: skewX(0deg) translate(100%, 0);
             transform-origin: top right;
             transition: all .2s ease-in;
-            z-index: -1;
         }
 
         .navigation-menu ul {
@@ -101,8 +100,13 @@
             border: none;
             color: hsl(0, 0%, 10%);
             text-decoration: none;
+            display: block;
         }
+        .navigation-menu ul li a:hover{
+            cursor: pointer;
+            color: hsl(0, 0%, 60%);
 
+        }
         .navigation-menu.active {
             transform: skewX(8deg) translate(0, 0);
 
@@ -206,21 +210,22 @@
 <div class="container">
     <div id="logo"><a href="css1.php">LOGO</a></div>
 
-
     <div class="navigation-wrapper">
         <div class="navigation-button">
             <i class="fa fa-bars"></i>
         </div>
         <div class="navigation-menu">
             <ul>
-                <li><a href="css1.php">HOME</a></li>
+                <li><a href="css1.php">HOME-css</a></li>
                 <li><a href="../js/js.php">GALLERY</a></li>
                 <li><a href="">CONTACT</a></li>
                 <li><a href="">LOCATION</a></li>
                 <li><a href="">TESTIMONIAL</a></li>
                 <li><a href="">PRICING</a></li>
             </ul>
+
         </div>
+
     </div>
     <section class="hero">
         <h1>Creative Design <br> <span> INTRODUCING</span></h1>
@@ -233,6 +238,8 @@
 <script>
     var navButton = document.querySelector('.navigation-button');
     var navMenu = document.querySelector('.navigation-menu');
+    navButton.addEventListener('click', openMenu, false);
+    window.addEventListener('click', closeMenu, false);
 
     function openMenu(event) {
 
@@ -241,14 +248,20 @@
         event.preventDefault();
         event.stopImmediatePropagation();
     }
-    function closeMenu() {
+    function closeMenu(e) {
+
+        if (e.target === 'A') {
+            /* Ели кликнули по ссылки - перейти по ней */
+            //window.location.href = e.target.href;
+            return;/* Это может и не нужно, но, на всякий случай, выходим из функции*/
+        }
+
         if (navButton.classList.contains('active')) {
             navButton.classList.remove('active');
             navMenu.classList.remove('active');
         }
     }
-    navButton.addEventListener('click', openMenu, false);
-    window.addEventListener('click', closeMenu, false);
+
 
 </script>
 </body>

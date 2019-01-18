@@ -68,6 +68,9 @@
             <li>
                 <a href="navigation-menu.html">Creative navigation menu</a>
             </li>
+            <li>
+                <a href="tabs.html">Responsive Tabs</a>
+            </li>
 
         </ul>
     </nav>
