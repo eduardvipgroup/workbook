@@ -71,6 +71,9 @@
             <li>
                 <a href="tabs.html">Responsive Tabs</a>
             </li>
+            <li>
+                <a href="mobile.html">Mobile UI Design</a>
+            </li>
 
         </ul>
     </nav>
