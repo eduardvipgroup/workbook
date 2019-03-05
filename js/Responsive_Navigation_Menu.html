@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Responsive Navigation Menu</title>
+    <script src="../library/js/jquery.js"></script>
+
+    <style>
+
+        .index {
+            display: block;
+            color: rgb(0, 0, 0);
+            text-decoration: none;
+            background: #35acdf;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            text-transform: uppercase;
+            margin: 30px;
+            cursor: pointer;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body,.left,.right{
+            height:100%;
+        }
+
+        body{
+            background: radial-gradient(ellipse at center, #2C3E50, #0F1E32);
+            perspective: 1100px;
+            transform-style: preserve-3d;
+            /*display: flex;
+            justify-content: center;*/
+        }
+
+        .pseudo_body{
+            width:100%;
+            min-height:100%;
+            background:#ebebeb;
+            font-size:1.1em;
+            display:none;
+        }
+
+        .current{
+            display:block;
+            z-index:2;
+        }
+
+        h1{
+            letter-spacing: -2px;
+
+            font-family: 'Roboto Condensed', sans-serif;
+            font-weight: bold;
+            font-size: 3em;
+        }
+
+        .menu{
+            list-style:none;
+            background:#34495e;
+            height:50px;
+            margin:auto;
+            font-family: 'Roboto Condensed', sans-serif;
+            font-size:1.1em;
+
+
+
+        }
+
+        .menu li{
+            display:inline;
+            margin: 0 25px;
+
+
+
+        }
+
+        .menu li a{
+            color:#FFFFFF;
+            text-decoration:none;
+            height:50px;
+            line-height:50px;
+            display:inline-block;
+            text-transform: uppercase;
+            font-size: 17px;
+
+        }
+
+        .menu li a:hover,.menu li a.active{
+            color:white;
+
+        }
+
+        .content{
+            width:90%;
+            margin:auto;
+            font-family: 'Roboto Condensed', sans-serif;
+            line-height:1.5em;
+            background:#FFFFFF;
+            border-top-right-radius:5px;
+            border-top-left-radius:5px;
+        }
+
+        .subcontent{
+            width:95%;
+            margin:15px auto 0 auto;
+            padding-bottom:30px;
+        }
+
+        .content p{
+            margin:10px auto 0 auto;
+            text-align:justify;
+            text-justify:inter-word;
+        }
+
+        .content img{
+            max-width:100%;
+            display:block;
+            margin:auto;
+        }
+
+        .left,.right{
+            width:50%;
+            overflow:hidden;
+            position:absolute;
+            background:#FFFFFF;
+        }
+
+        .left{
+            left:0;
+            top:0;
+            transform-origin:left center;
+        }
+
+        .left:before{
+            z-index:2;
+            content:"";
+            background: linear-gradient(to left, rgba(0,0,0,0.66),transparent);
+            position:absolute;
+            left:0;
+            top:0;
+            width:100%;
+            height:100%;
+            animation:shadows 0.5s ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .left.animate{
+            animation:openLeft 0.5s ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .right.animate{
+            animation:openRight 0.5s ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .zoomIn{
+            animation:zoomIn 1s ease-out;
+            animation-iteration-count: 1;
+        }
+
+        .right{
+            right:0;
+            top:0;
+            transform-origin:right center;
+        }
+
+        .right:after{
+            z-index:2;
+            content:"";
+            background: linear-gradient(to right, rgba(0,0,0,0.66),transparent);
+            position:absolute;
+            right:0;
+            top:0;
+            width:100%;
+            height:100%;
+            animation:shadows 0.5s ease-out;
+            animation-fill-mode: forwards;
+        }
+
+        .right .pseudo_body{
+            position:absolute;
+            left:-100%;
+        }
+
+        @keyframes shadows
+        {
+            0% {opacity:0;}
+            100% {opacity:1;}
+        }
+
+        @keyframes openLeft
+        {
+            0% {transform:rotateY(0deg);z-index:2;}
+            100% {transform:rotateY(90deg);z-index:-1;}
+        }
+
+        @keyframes openRight
+        {
+            0% {transform:rotateY(0deg);z-index:2;}
+            100% {transform:rotateY(-90deg);z-index:-1;}
+        }
+
+        @keyframes zoomIn
+        {
+            0%{transform:translateZ(-4000px);opacity:0.33;}
+            100%{transform:translateZ(0px);opacity:1;}
+        }
+
+        .social
+        {
+            position:fixed;
+            bottom:20px;
+            right:20px;
+            background:red;
+            padding:5px;
+            border-radius:5px;
+            animation:new .5s linear infinite;
+            margin-top:-50px;
+        }
+        .social a
+        {
+            text-decoration:none;
+            color:#fff;
+            font-size:18px;
+        }
+        @keyframes new
+        {
+            0%
+            {
+                transform:scaleX(1);
+            }
+            50%
+            {
+                transform:scaleX(.95);
+            }
+            100%
+            {
+                transform:scaleX(1);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<p><a class="index" href="js.php">главная</a></p>
+
+<div id="Home" class="pseudo_body current">
+    <div class="content">
+
+        <ul class="menu">
+            <li><a class="active" href="#Home" >Научная новизна</a></li>
+            <li><a href="#About" >Теоретическая значимость</a></li>
+            <li><a href="#Contact">Практическая значимость</a></li>
+        </ul>
+
+        <div class="subcontent">
+            <br>
+            <h1>Научная новизна</h1>
+            <br>
+            <p><b style="color: #2b8cf6">Научная новизна исследования</b> состоит в том, что:
+                <br>- решение проблемы становления ОКК личности обосновано и осуществлено в рамках целенаправленного развития ЧГ курсантов в образовательном процессе военного вуза;
+                <br>- компетентностный подход теоретически и практически разработан с ориентацией на ценности-цели образования в обществе знаний;
+                <br>- понятие «общекультурная компетентность» сформулировано и раскрыто как личностное новообразование, востребованное в сферах познания, общения и смыслотворения, характеризующее «человека культуры» и являющееся результатом целенаправленного образовательного процесса;
+                <br>- понятие «читательская грамотность» обосновано как интегративная способность личности к чтению-пониманию и смыслотворению и одно из условий становления ОКК курсантов в образовательном процессе военного вуза;
+                <br>- введено понятие «Текст как фрагмент культуры» для обозначения гуманитарного текста, педагогически подготовленного к смыслотворческому взаимодействию субъектов образовательного процесса.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div id="About" class="pseudo_body">
+    <div class="content">
+        <ul class="menu">
+            <li><a href="#Home">Научная новизна</a></li>
+            <li><a class="active" href="#About">Теоретическая значимость</a></li>
+            <li><a href="#Contact">Практическая значимость</a></li>
+        </ul>
+        <div class="subcontent">
+            <br>
+            <h1>Теоретическая значимость</h1>
+            <br>
+
+           <p><b style="color: #2b8cf6">Теоретическая значимость исследования</b> состоит в том, что:
+               <br>- современные концепции развития общества педагогически интерпретированы в связи с проблемой общекультурного развития личности в условиях XXI века и предложен способ диалектической трансформации целей-результатов образования в рамках информационного общества в цели-ценности образования в обществе знаний, где реализация компетентностного подхода выступает как социо-гуманитарная «парадигма образования в XXI веке»);
+               <br>- разработана трехкомпонентная структура ОКК, раскрывающая взаимосвязь и взаимообусловленность основных психических процессов в деятельности человека, и на этом основании позволяющая использовать теоретико-практические конструкты для целостного подхода к становлению ОКК в образовательном процессе вуза;
+               <br>- выявлены предпосылки и факторы становления ОКК курсантов в образовательном процессе военных вузов;
+               <br>- обоснован комплекс педагогических условий развития ЧГ курсантов и апробирована модель его реализации в образовательном процессе военных вузов;
+               <br> - обобщены и сформулированы метапредметные подходы к интеграции предметов гуманитарного и социально-экономического цикла, способы трансформации учебных текстов в Тексты как фрагменты культуры, типология познавательных заданий и диагностических методик, целевой уровень развития ЧГ и критерии ее диагностики, направленные на общекультурное развитие личности.
+           </p>
+        </div>
+    </div>
+</div>
+
+<div id="Contact" class="pseudo_body">
+    <div class="content">
+        <ul class="menu">
+            <li><a href="#Home">Научная новизна</a></li>
+            <li><a href="#About">Теоретическая значимость</a></li>
+            <li><a class="active" href="#Contact">Практическая значимость</a></li>
+        </ul>
+        <div class="subcontent">
+            <br>
+            <h1>Практическая значимость</h1>
+            <br>
+            <p>
+               <b style="color: #2b8cf6"> Практическая значимость:</b>
+                <br>- разработан учебно-методический комплекс «Текст – Личность – Культура», обеспечивающий реализацию педагогических условий развития ЧГ студентов и курсантов независимо от профиля их профессиональной подготовки;
+                <br>- элементы учебного компонента УМК «Текст – Личность – Культура» (учебные тексты, способы обучения читательским умениям и «обратной связи», познавательные задания, диагностические методики и др.) могут использоваться в качестве самостоятельных средств развития ЧГ обучающихся в рамках учебной работы и самостоятельной подготовки обучающихся по дисциплинам гуманитарного и социально-экономического цикла;
+                <br>- методические рекомендации могут быть использованы для реализации теоретико-педагогических и научно-методических подходов к разработке УМК, спецкурсов, учебных занятий по гуманитарным и социально-экономическим дисциплинам в соответствии с требованиями ФГОС ВПО к общекультурной подготовке выпускников военных и гражданских вузов.
+
+            </p>
+        </div>
+    </div>
+</div>
+<div class="social">
+    <a href="https://github.com/eduardvipgroup" target="_blank">Click Here about my GitHub profile</a>
+</div>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+        function nextPage($next){
+            //Get the current page and split it in two parts
+            var $current = $(".current");
+            var width = $current.width();
+            var height = $current.height();
+            var $fixed_current = $current.clone().css("width",width+"px");
+            var $left = $('<div/>',{'class': 'left'});
+            var $right = $('<div/>',{'class': 'right'});
+            $left.css("height",height+"px");
+            $right.css("height",height+"px");
+            $left.append($fixed_current.clone());
+            $right.append($fixed_current.clone());
+            $("body").append($left,$right);
+            $current.removeClass("current");
+            //Launch all the animations for the transition
+            $left.addClass("animate");
+            $right.addClass("animate");
+            $next.addClass("zoomIn");
+            $next.addClass("current");
+            //Reset at the end of the last animation
+            $next.on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(){
+                $(".left,.right").remove();
+                $(".zoomIn").removeClass("zoomIn");
+            });
+        }
+
+        $(".menu a").on("click",function(){
+            var $this = $(this);
+            if(!$this.hasClass("active")){
+                var $next = $($this.attr("href"));
+                nextPage($next);
+            }
+            return false;
+        });
+
+        /* For the demo */
+        setTimeout(function () {
+            $('.current a[href="#About"]').trigger("click");
+        }, 1000);
+        setTimeout(function () {
+            $('.current a[href="#Contact"]').trigger("click");
+        }, 3000);
+
+    });
+
+</script>
+</body>
+</html>
