@@ -33,20 +33,12 @@
                 <a href="hexagon.html">Glowing hexagon</a>
             </li>
             <li>
-                <a href="#">работа с БД Mysql</a>
+                <a href="TweenMax.html">плагин TweenMax</a>
             </li>
             <li>
-                <a href="#">get, post, file - методы передачи данных на сервер</a>
+                <a href="Responsive_Navigation_Menu.html">Responsive Navigation Menu</a>
             </li>
-            <li>
-                <a href="#">Cookie & Session</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">шаблоны</a>
-            </li>
+
         </ul>
     </nav>
 

@@ -6,9 +6,88 @@
     <link rel="stylesheet" href="style/mobile.css">
     <link rel="stylesheet" href="../library/fontAwesome/css/fontawesome-all.css">
     <script src="../library/js/jquery.js"></script>
+    <style>
+        [anim=ripple] {
+            position: relative;
+            overflow: hidden;
+        }
+        [anim=ripple]:before {
+            content: "";
+            position: absolute;
+            display: block;
+            background: var(--ripple-background, white);
+            border-radius: 50%;
+            pointer-events: none;
+            top: calc(var(--y) * 1px);
+            left: calc(var(--x) * 1px);
+            width: calc(var(--d) * 1px);
+            height: calc(var(--d) * 1px);
+            opacity: calc(var(--o, 1) * var(--ripple-opacity, 0.3));
+            transition: calc(var(--t, 0) * var(--ripple-duration, 600ms)) var(--ripple-easing, linear);
+            transform: translate(-50%, -50%) scale(var(--s, 1));
+            transform-origin: center;
+        }
+
+        button {
+            --ripple-background: white;
+            --ripple-opacity: 0.3;
+            --ripple-duration: 600ms;
+            border: 1px solid #e02200;
+            border-radius: 0;
+            padding: 0.75em 3em;
+            font-size: 1em;
+            outline: none;
+            display: block;
+            background: tomato;
+            color: white;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            min-width: 200px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        a {
+            --ripple-background: black;
+            --ripple-opacity: 0.1;
+            --ripple-duration: 600ms;
+            display: block;
+            margin-top: 1em;
+            padding: 0.75em 3em;
+            background: whitesmoke;
+            color: black;
+            text-decoration: none;
+            border: 1px solid gainsboro;
+            min-width: 200px;
+            text-align: center;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            transition: background-color .5s;
+        }
+        a:hover {
+            background-color: #ededed;
+        }
+
+        .rainbow {
+            --ripple-opacity: 1;
+            --ripple-background: radial-gradient(circle at center, rebeccapurple, dodgerblue, olive, gold, orange, tomato);
+            --ripple-duration: .5s;
+            background-color: skyblue;
+            color: rgba(255, 255, 255, 0.7);
+            transition: background-color 1s, color 1s;
+        }
+        .rainbow:hover {
+            background-color: #b3e0f2;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-<p><a class="index" href="css1.php">главная</a></p>
+<div class="box">
+    <a href="css1.php" anim="ripple" STYLE="background: transparent; color: white">ГЛАВНАЯ</a>
+    <button anim="ripple" >Button</button>
+    <a href="#" anim="ripple">Link</a>
+    <a class="rainbow" href="#" anim="ripple">Rainbow</a>
+</div>
 
 <div class="mobile">
     <div class="top"></div>
@@ -22,12 +101,32 @@
             <li><i class="fa fa-images" aria-hidden="true"></i></li>
             <li><i class="fa fa-camera" aria-hidden="true"></i></li>
         </ul>
+    </div>
+</div>
+<div class="wave">
+    <svg id="curve" data-name="curve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+         viewBox="0 0 1280 138.98732">
+        <path class="cls-3" d="M0,255s247.82672-77.555,492-67c347,15,430,121,788,19V326L0,319Z"
+              transform="translate(0 -187.01268)"/>
+    </svg>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {
-        $('.bottom').click(function (){
+        $('.bottom').click(function () {
             $('.screen').toggleClass('active');
+            $('path').toggleClass('active');
         });
+    })
+</script>
+<script type="text/javascript">
+    [].map.call(document.querySelectorAll('[anim="ripple"]'), el => {
+        el.addEventListener('click', e => {
+            e = e.touches ? e.touches[0] : e;
+            const r = el.getBoundingClientRect(), d = Math.sqrt(Math.pow(r.width, 2) + Math.pow(r.height, 2)) * 2;
+            el.style.cssText = `--s: 0; --o: 1;`;
+            el.offsetTop;
+            el.style.cssText = `--t: 1; --o: 0; --d: ${d}; --x:${e.clientX - r.left}; --y:${e.clientY - r.top};`;
+        })
     })
 </script>
 </body>
