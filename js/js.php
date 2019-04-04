@@ -38,7 +38,9 @@
             <li>
                 <a href="Responsive_Navigation_Menu.html">Responsive Navigation Menu</a>
             </li>
-
+            <li>
+                <a href="parallax-rellax.html">Parallax-Relax</a>
+            </li>
         </ul>
     </nav>
 
