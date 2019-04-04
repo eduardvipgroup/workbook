@@ -13,7 +13,7 @@
     line-height: 1em;
     margin: 0 0 0 50px;
     padding: 0;
-    mix-blend-mode: overlay;                      !important;
+    mix-blend-mode: overlay;
 }
 .kate:hover{
     animation: animate 9s infinite;
