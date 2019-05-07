@@ -15,7 +15,7 @@
 <div class="wrapper-item">
     <div class="name name-lesson" style="background: url('../library/img/css.png') no-repeat; background-size: cover;width: 110px"></div>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper-item" role="navigation" style="width: 230px; margin-left: 20px">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper-item" role="navigation" style="width: 240px; margin-left: 20px">
         <ul class="nav sidebar-nav sidebar-nav-item">
             <li>
                 <a class="index" href="../index.html">главная</a>
@@ -73,6 +73,9 @@
             </li>
             <li>
                 <a href="mobile.html">Mobile UI Design</a>
+            </li>
+            <li>
+                <a href="responsive-design-PSD.html">Responsive Design - PSD</a>
             </li>
 
         </ul>

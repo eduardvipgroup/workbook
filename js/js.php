@@ -41,6 +41,9 @@
             <li>
                 <a href="parallax-rellax.html">Parallax-Relax</a>
             </li>
+            <li>
+                <a href="ionicons.html">Wine-shop (ionicons)</a>
+            </li>
         </ul>
     </nav>
 
