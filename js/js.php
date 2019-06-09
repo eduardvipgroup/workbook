@@ -44,6 +44,9 @@
             <li>
                 <a href="ionicons.html">Wine-shop (ionicons)</a>
             </li>
+            <li>
+                <a href="move-text-onmouse.html">Move text on Mousemove</a>
+            </li>
         </ul>
     </nav>
 

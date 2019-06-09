@@ -1,0 +1,29 @@
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Roboto Condensed", sans-serif;
+}
+.box{
+    position: relative;
+}
+img{
+    width: 400px;
+    height: auto;
+}
+#tooltip{
+    position: fixed;
+    opacity: 0;
+    display: block;
+    font-size: 2em;
+    padding: 5px 10px;
+    background: rgba(22, 27, 40, 0.4);
+    color: white;
+    text-shadow: 0 2px 10px #0f9afa;
+}
+.box:hover #tooltip{
+    opacity: 1;
+}

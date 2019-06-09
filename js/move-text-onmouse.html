@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Move Text on Mousemove</title>
+    <link rel="stylesheet" href="css/move-text-onmouse.css">
+</head>
+<body>
+<div class="box">
+    <img src="../library/img/black-car.jpeg" alt="car">
+    <span id="tooltip">It's cool black car!!</span>
+</div>
+
+<script type="text/javascript">
+    var tooltip = document.getElementById('tooltip');
+    window.onmousemove = function (ev) {
+        var x = ev.clientX,
+            y = ev.clientY;
+        tooltip.style.top = (y + 20) +'px';
+        tooltip.style.left = (x + 20) +'px';
+
+    }
+</script>
+</body>
+</html>
