@@ -8,7 +8,8 @@
     <script src="../library/js/bootstrap.min.js"></script>
     <style>.sidebar-nav li:nth-child(1):before {
             background-color: #0b0c86;
-        }</style>
+        }
+    </style>
 </head>
 <body>
 
@@ -79,6 +80,9 @@
             </li>
             <li>
                 <a href="responsive-image-gallery.html">Responsive Image Gallery (GRID)</a>
+            </li>
+            <li>
+                <a href="simple-button-hover.html">Simple Button Hover Effects</a>
             </li>
         </ul>
     </nav>

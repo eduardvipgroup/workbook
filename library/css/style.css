@@ -1,5 +1,5 @@
 body {
-    overflow-x: hidden;
+    overflow-x: auto;
     margin: 0;
     padding: 0;
 }
@@ -36,12 +36,12 @@ body {
     line-height: 100px;
     background: #35acdf;
     margin: 10px auto;
-    font-size: 50px;
+    font-size: 20px;
     font-weight: bold;
 }
 .name-lesson{
-    font-size: 30px;
-    margin: 0 0 0 100px;
+    font-size: 10px;
+    margin: 0 0 0 50px;
     width: 300px;
     background: url("../img/php.png") no-repeat;
     background-size: contain;
@@ -56,19 +56,20 @@ body {
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    margin: 100px auto;
+    margin: 50px auto;
 }
 #sidebar-wrapper-item{
     width: 400px;
     height: 100%;
     overflow-y: auto;
-    overflow-x: hidden;
+    overflow-x: auto;
     background: #def0ff;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
-    margin: 90px 0;
+    margin: 20px 0;
+    font-size: 10px;
 }
 
 
@@ -153,7 +154,7 @@ body {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    padding: 10px 15px 10px 30px;
+    padding: 2px 5px 5px 15px;
     color: #fffab1;
 }
 .sidebar-nav-item li a {
