@@ -77,7 +77,9 @@
             <li>
                 <a href="responsive-design-PSD.html">Responsive Design - PSD</a>
             </li>
-
+            <li>
+                <a href="responsive-image-gallery.html">Responsive Image Gallery (GRID)</a>
+            </li>
         </ul>
     </nav>
 
