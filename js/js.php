@@ -47,6 +47,9 @@
             <li>
                 <a href="move-text-onmouse.html">Move text on Mousemove</a>
             </li>
+            <li>
+                <a href="setTimeout.html">SetTimeOut-js</a>
+            </li>
         </ul>
     </nav>
 
